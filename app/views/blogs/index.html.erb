@@ -1,19 +1,19 @@
 
 <div class='blog-container-home'>
-<% if current_user %>
-<div><a href='/blogs/new'>Create a new blog</a></div>
-<% end %>
 
 <% @blogs.all.reverse[0..20].each do |b| %>
+<div class='post-container'>
+<div class='post-title'><a href='/blogs/<%= b.id %>'><%= b.title %></a></div>
+<div class='author'>Author: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></a></div>
+<div class='post-content'><%= raw b.content %></div>
 
-<div>Title: <a href='/blogs/<%= b.id %>'><%= b.title %></a></div>
-<div>Post Content: <%= b.content %></div>
-<div>Posted by: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></a></div>
-<div>Comments:</div>
-	<% b.comments.each do |c| %>
-	<div><%= c.content %></a></div>
-	<div>Comment by: <%= c.user.fname %></a></div>
-		<%end%>
+
+<hr id='line-break'>
+
+</div>
+
+
+
 
 <% end %>
 
