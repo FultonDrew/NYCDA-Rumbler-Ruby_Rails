@@ -68,3 +68,19 @@ nav {
 	color: white;
 	text-align: center;
 }
+
+#loggedin {
+	// border: 2px solid;
+	text-align: right;
+	margin: 10px;
+	float:right;
+}
+
+#loggedin-dot {
+	border: 1px solid;
+	border-radius: 50%;
+	background-color: green;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+}

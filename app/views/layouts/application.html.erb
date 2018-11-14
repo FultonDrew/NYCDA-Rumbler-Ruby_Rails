@@ -35,7 +35,14 @@
       <% end %>
 </nav>
 
+<div id='loggedin'>
+<div> <% if user_signed_in? %> 
+<div id='loggedin-dot'></div>
+Logged in as: <a href='/users/<%= current_user.id %>'><%= current_user.fname %> <%= current_user.lname %></a>
 
+<% end %>
+</div>
+</div>
 
     <%= yield %>
   </body>

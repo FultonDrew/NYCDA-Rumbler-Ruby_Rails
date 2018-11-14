@@ -1,12 +1,5 @@
-<% if user_signed_in? %>
 
-<h1>Hello <%= current_user.fname%>!</h1>
-
-<%else%>
-<h1>Please sign in</h1>
-
-<% end %>
-
+<div class='blog-container-home'>
 <% if current_user %>
 <div><a href='/blogs/new'>Create a new blog</a></div>
 <% end %>
@@ -15,7 +8,7 @@
 
 <div>Title: <a href='/blogs/<%= b.id %>'><%= b.title %></a></div>
 <div>Post Content: <%= b.content %></div>
-<div>Posted by: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></div>
+<div>Posted by: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></a></div>
 <div>Comments:</div>
 	<% b.comments.each do |c| %>
 	<div><%= c.content %></a></div>
@@ -24,4 +17,4 @@
 
 <% end %>
 
-
+</div>

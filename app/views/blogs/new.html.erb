@@ -5,6 +5,7 @@
 <%= form_for Blog.new do |f| %>
 	<div>Title: <%= f.text_field :title %></div>
 	<br>
-	<div>Content: <%= f.text_area :content %></div>
+	<div>Content: <%= f.cktext_area :content %></div>
 	<%= f.submit %>
 	<% end %>
+
