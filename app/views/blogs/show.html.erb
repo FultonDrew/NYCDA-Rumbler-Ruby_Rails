@@ -1,30 +1,45 @@
+
+
 <div class='blog-container-page'>
-<div class='post-container-page'>
+<div class='post-container-page' >
 <div class='post-title-page'><h1><%= current_blog.title %> </h1></div>
+<div class='author'>Author: <a href='/users/<%= current_blog.user.id %>'><%= current_blog.user.fname%> <%= current_blog.user.lname %></a></div>
 <div class='post-content-page'><h2><%= raw current_blog.content %></h2></div>
 </div>
-
-<div id='comment-container-page'>
-<div>Comments:</div>
-	<% current_blog.comments.each do |c| %>
-	<div><%= c.content %></a></div>
-	<div>Comment by: <%= c.user.fname %></a></div>
-		<%end%>
-</div> 
+<div id='see-comments-button'>Click to see comments</div>
+<div id='make-comments-button'>Click to write a comment</div>
 
 </div>
-
+<hr id='line-break'>
 
 
 <% if user_signed_in? %>
-<%= form_for ([current_blog, current_blog.comments.build]) do |f| %>
-	<div>Comment: <%= f.text_area :content %></div>
-	<%= f.submit %>
+	<%= form_for ([current_blog, current_blog.comments.build]) do |f| %>
+	<div id='make-comment-box'>Add a comment! 
+		<div id='comment-form'><%= f.text_area :content, :rows => 10, style: 'width:95%;' 'height:90px;' %></div>
+	</div>
+	<div id='submit-comment-button'><%= f.submit :class => "submit-button" %></div>
 	<% end %>
 
-<% if current_user.id == current_blog.user_id %>
-	<%= link_to "Update", edit_blog_path %>
-	<%= link_to "Delete", blog_path, method: :delete, data: {confirm: "Are you sure?"} %>
-	
-		<% end %>
+<div id='comment-container-page'>
+<!-- <div id='comment-display'>Comments:</div> -->
+<% @blog.comments.all.reverse.each do |c| %>
+	<div class="singleComment">
+		<div id='comment-author' ><strong><a href='/users/<%= c.user.id %>'> <%= c.user.fname %></a>:</strong>
+		<%= c.content %>
+		</div>
+	</div>
+	<%end%>
+</div> 
+
+	<% if current_user.id == current_blog.user_id %>
+	<div class='blog-buttons'>
+	<div class='update-button'><%= link_to "Update Blog", edit_blog_path, :class => "update" %></div>
+	<div class='delete-button'><%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: "Are you sure?"}, :class => "delete"  %></div>
+	</div>
+	<% end %>
+
 <% end %>
+
+<%= javascript_include_tag 'app.js' %>
+

@@ -1,50 +1,50 @@
 
 
 .blog-container-page {
-	border: 2px solid;
+	// border: 2px solid;
 	margin: 50px auto;
 	width: 90%;
+	grid-column: 1/3;
 	display: grid;
 	grid-template-columns: 1fr 1fr;	
 }
 
 .post-container-page {
-	border: 2px solid blue;
+	// border: 2px solid blue;
 	width: 90%;
 	margin: 10px auto;
 	grid-column: 1/3;
-
+	background-color: rgba(234,226,222,0.9);
 	min-height: 300px;
+	border-radius: 8px;
+	box-shadow: 3px 3px 3px grey;
 }
 
 
 
 .post-title-page {
-	border: 2px solid;
-	width: 70%;
+	// border: 2px solid;
+	width: 90%;
 	margin: 10px auto;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	text-align: center;
 	text-decoration: none;
-	color: green;
-
-
 }
 
 .post-title-page a{
 	text-align: center;
 	text-decoration: none;
 	align-items: center;
-	border: 2px solid;
+	// border: 2px solid;
 }
 
 #line-break {
 	width: 65%;
-	margin: 50px auto;
+	margin: 20px auto;
 }
 
 .post-content-page {
-	border: 2px solid red;
+	// border: 2px solid red;
 	width: 100%;
 	height: inherit;
 	// margin: 10px auto;
@@ -59,11 +59,157 @@
 
 .author-page {
 	// border-right: 2px solid;
-	width: 40%;
+	width: 80%;
 	margin: 5px auto;
 	border-top: 1px solid;
 	display: block;
-	
+	background-color: rgba(234,226,222,0.9);
 	text-align: center;
 }
 
+#comment-container-page {
+	// border: 2px solid yellow;
+	width: 70%;
+	grid-column: 1/3;
+	margin: 0 auto;
+}
+
+#comment-display {
+	border-bottom: 2px solid;
+	width: 100%;
+	// display: none;
+	font-size: 2em;
+	grid-column: 1/3;
+	text-align: center;
+}
+
+.singleComment{
+	// border: 2px solid salmon;
+	visibility: hidden;
+}
+// #comment-content {
+// 	border: 2px solid red;
+// 	width: 50%;
+// 	grid-column: 2/3;
+// 	display: block;
+// 	height: 10vh;
+// }
+
+#comment-author {
+	// border: 2px solid green;
+	width: 80%;
+	font-size: 2em;
+	display: block;
+	margin: 10px auto;
+	padding: 15px;
+	background-color: rgba(234,226,222,0.9);
+}
+
+#see-comments-button {
+	// border: 2px solid;
+	margin: 15px auto;
+	width: 45%;
+	height: 7vw;
+	background-color: rgba(65,91,118,0.4);
+	grid-column: 1/2;
+	text-align: center;
+	line-height: 7vw;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px grey;
+}
+
+#make-comments-button {
+	// border: 2px solid;
+	margin: 15px auto;
+	width: 45%;
+	height: 7vw;
+	background-color: rgba(65,91,118,0.4);
+	grid-column: 2/3;
+	text-align: center;
+	line-height: 7vw;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px grey;
+}
+
+#make-comment-box {
+	// border: 2px solid red;
+	width: 50%;
+	display: none;
+	height: 20vh;
+	margin: 0 auto;
+	font-size: 2em;
+	text-align: center;
+	grid-column: 1/3;
+}
+
+#submit-comment-button {
+	// border: 2px solid green;
+	width: 10%;
+	display: none;
+	margin: 0 auto;
+}
+
+#comment-form {
+	// width: 90%;
+	// border: 2px solid;
+	grid-column: 1/3;
+}
+
+textarea {
+font-size: 0.8em;
+}
+
+.submit-button {
+	background-color: rgba(35,54,86,0.5);
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.blog-buttons {
+	// border: 1px solid;
+	margin: 40px auto;
+	width: 45%;
+	grid-column: 1/3;
+	display: flex;
+	justify-content: space-between;
+}
+
+.update-button {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 49%;
+	text-align: center;
+	margin: 20px auto;
+	display: inline;
+	font-size: 2em;
+	text-decoration: none;
+	background-color: rgba(35,54,86,0.5);
+}
+
+.update {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	margin: 20px;
+}
+
+.delete-button {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 49%;
+	text-align: center;
+	margin: 20px auto;
+	display: inline;
+	font-size: 2em;
+	text-decoration: none;
+	background-color: red;
+}
+
+.delete {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	margin: 20px;
+}

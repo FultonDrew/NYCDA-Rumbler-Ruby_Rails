@@ -22,8 +22,8 @@ class BlogsController < ApplicationController
 	end
 
 	def show
-		# @blog = Blog.find(params[:id])
-		current_blog
+		@blog = Blog.find(params[:id])
+		# current_blog
 	end
 
 	def edit 
@@ -34,7 +34,7 @@ class BlogsController < ApplicationController
 	def update
 		@current_blog = Blog.find(params[:id])
 		if @current_blog.update(blog_params)
-			redirect_to "/"
+			redirect_to "/blogs/#{current_blog.id}"
 		end
 	end
 

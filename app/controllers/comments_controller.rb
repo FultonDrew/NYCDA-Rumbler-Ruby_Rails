@@ -9,19 +9,23 @@ def create
 	@blog = Blog.find(params[:blog_id])
 	@comment = current_user.comments.new(comment_params)
 	@comment.blog = @blog
-	if (@comment.save)
-		redirect_to "/"
-	else
-		redirect_to "/blogs/#{params[:blog_id]}"
-	end
 
+	if @comment.save
+		redirect_to "/blogs/#{params[:blog_id]}"
+	else 
+		redirect_to "/"
+	end
 end
 
 def edit 
 		@blog = Blog.find(params[:blog_id])
 		@comment = Comment.find(params[:id])
+end
 
-	end
+def show
+	@comment = Comment.find(params[:id])
+end
+
 
 def update
 		comment = Comment.find(params[:id])

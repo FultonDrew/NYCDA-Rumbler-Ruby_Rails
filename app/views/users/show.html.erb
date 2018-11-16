@@ -1,5 +1,5 @@
 
-<h2 id='user-head'><%= @user.fname %> <%= @user.lname %>'s Profile</h2>
+<h2 class='header'><%= @user.fname %> <%= @user.lname %>'s Profile</h2>
 
 
 
@@ -10,11 +10,12 @@
 <div class='blog-container-home'>
 <div class='post-container'>
 	<div id='title-box'>
-		<div class='post-title'><a href="/blogs/<%= b.id %>"><%= b.title%></a></div>
+		<div class='post-title'><a href="/blogs/<%= b.id %>" onClick="window.location.reload()"><%= b.title%></a></div>
 	</div>
-<hr id='line-break'>
+
 	<div class='post-content'><%= raw b.content %></div>
 </div>
 </div>
+<hr id='line-break'>
 
 <% end %>

@@ -10,10 +10,12 @@
   </head>
 
   <body>
+<div class='page-wrapper'>
+
 <nav>
   <div id='head-box'>
     <div class='title'>Where next?</div>
-    <div class='title-sub'>This is a travel blog built to both inspire and assist those who love to wander</div>
+    <div class='title-sub'>A travel blog for those who love to wander</div>
   </div>
     <% if user_signed_in? %>
     <div id='navBtn'>
@@ -35,6 +37,10 @@
       <% end %>
 </nav>
 
+
+
+
+
 <div id='loggedin'>
 <div> <% if user_signed_in? %> 
 <div id='loggedin-dot'></div>
@@ -45,14 +51,17 @@ Logged in as: <a href='/users/<%= current_user.id %>'><%= current_user.fname %> 
 </div>
 
 
-
     <%= yield %>
-    <footer>
+</div>
+<!-- <footer>
 <div class='footer'>
   <li>Contact the devloper</li>
   <li>Home</li>
   <li>Developers GitHub</li>
 </div>
-</footer>
+</footer> -->
+
+
+
   </body>
 </html>

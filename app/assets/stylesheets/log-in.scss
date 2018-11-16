@@ -1,0 +1,48 @@
+.log-in-container {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 40%;
+}
+
+.log-in-email-form {
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 55px;
+	width: 100%;
+	font-size: 2em;
+	background-color: white;
+	color: blue;
+}
+
+.login-label {
+	font-size: 2em;
+	text-align: center;
+}
+
+.log-in-password-form {
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 55px;
+	width: 100%;
+	font-size: 2em;
+	background-color: white;
+}
+.log-in-container-remember {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 40%;
+	font-size: 1em;
+}
+
+
+#loginElement {
+	width: 100px;
+	height: 50px;
+	border-radius: 5%;
+	box-shadow: 2px 2px 2px;
+	text-align: center;
+	line-height: 50px;
+	display: inline-block;
+
+	background-color: #EAE2DE;
+}

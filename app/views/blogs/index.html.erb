@@ -2,19 +2,21 @@
 <div class='blog-container-home'>
 
 <% @blogs.all.reverse[0..20].each do |b| %>
-<div class='post-container'>
-<div class='post-title'><a href='/blogs/<%= b.id %>'><%= b.title %></a></div>
+<div class='post-container' onmouseover = "this.style.backgroundColor='rgba(123,155,166,0.4)';" onmouseout = "this.style.backgroundColor='rgba(234,226,222,0.9)';">
+<div class='post-title'><a href='/blogs/<%= b.id %>' onClick="window.location.reload()"><%= b.title %></a></div>
 <div class='author'>Author: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></a></div>
 <div class='post-content'><%= raw b.content %></div>
 
 
-<hr id='line-break'>
+
 
 </div>
-
+<hr id='line-break'>
 
 
 
 <% end %>
 
 </div>
+
+<%= javascript_include_tag 'app.js' %>
