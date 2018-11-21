@@ -1,8 +1,3 @@
-// .page-wrapper {
-// 	height: 100vh;
-// 	display: grid;
-// 	grid-template-rows: 0.01fr 1fr 0.01fr;
-// }
 
 body {
 	margin: 0;
@@ -11,21 +6,36 @@ body {
 nav {
 	width: 100%;
 	margin: 0 auto;
-	height: 275px;
+	height: 235px;
 	// border: 2px solid;
 	background-color: rgba(65,91,118,0.9);
-	box-shadow: 5px 5px 5px grey;
+	box-shadow: 5px 5px 5px rgba(253,106,2,0.8);
 	text-decoration: none;
 	overflow: hidden;
 	grid-column: 1/3;
 }
 
+#map {
+	border: 6px double grey;
+	width: 18vw;
+	height: 10vw;
+	// color: white;
+	position: absolute;
+	margin: 20px 0 100px 35px;
+	background-image: url('https://ubisafe.org/images/vector-maps-flat-3.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+ #hamburger {
+ 	display: none;
+ }
+
 #navElement {
-	width: 100px;
+	width: 6vw;
+	height: 5.5vh;
 	text-decoration: none;
-	height: 50px;
 	border-radius: 5%;
-	box-shadow: 2px 2px 2px;
+	box-shadow: 2px 2px 2px rgba(253,106,2,0.8);
 	text-align: center;
 	line-height: 50px;
 	margin: 10px;
@@ -36,16 +46,16 @@ nav {
 
 #navElement a{
 	text-decoration: none;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #navBtn {
 	text-decoration: none;
-	margin: 50px auto;
+	margin: 20px auto;
 	// border: 2px solid yellow;
 	float: right;
 	width: 85%;
 	height: 50px;
-
 }
 
 #navHead {
@@ -69,20 +79,27 @@ nav {
 	width: 100%;
 	// border: 2px solid red;
 	display: block;
-	font-size: 1em;
-	margin: 10px auto;
+	font-size: 1.3em;
+	margin: 0 auto;
 	color: white;
 	text-align: center;
+	font-family: 'Amatic SC', cursive;
+}
+
+.title a {
+	text-decoration: none;
+	color: white;
 }
 
 .title-sub {
 	width: 70%;
 	// border: 2px solid pink;
 	display: block;
-	font-size: 0.25em;
+	font-size: 0.3em;
 	margin: 0 auto;
 	color: white;
 	text-align: center;
+	font-family: 'Amatic SC', cursive;
 }
 
 #loggedin {
@@ -91,6 +108,7 @@ nav {
 	margin: 10px;
 	float:right;
 	grid-column: 2/3;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #loggedin-dot {
@@ -100,4 +118,67 @@ nav {
 	width: 10px;
 	height: 10px;
 	display: inline-block;
+}
+
+
+@media only screen and (max-width: 1199px) {
+	#navBtn {
+		display: none;
+	}
+	#hamburger {
+		width: 90px;
+		
+		display: block;
+		height: 90px;
+		border: 1px solid;
+		float: right;
+		background-image: url('https://www.whooosreading.org/assets/general/menu-icon-f74b94a86745329ff48fd8a5f2a6783134e60da42990518733b2e43a17c84101.png');
+		color: white;
+		background-size: 100% 100%;
+	}
+}
+
+@media only screen and (max-width: 505px){
+	.title {
+		font-size: 1.1em;
+	}
+
+	#hamburger {
+		width: 70px;
+		height: 70px;
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#navBtn {
+		width: 100%;
+		margin: 0 auto;
+		margin: 50px 0 0 0;
+		height: 235px;
+		// border: 2px solid;
+
+	}
+	#navElement {
+		width: 40px;
+		height: 20px;
+		// border: 1px solid yellow;
+		line-height: 20px;
+	}
+	#map {
+		display: none;
+	}
+
+	#navElement a{
+		text-decoration: none;
+		font-family: 'Hind Guntur', sans-serif;
+		font-size: 0.25em;
+		margin: 0 auto;
+		line-height: 0;
+	}
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
 }

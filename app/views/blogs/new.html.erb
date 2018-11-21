@@ -1,15 +1,16 @@
 <h1 class='header'>Create a new blog</h1>
 
 
-
+<!-- Form to create a new blog with a title and content. -->
 <%= form_for Blog.new do |f| %>
 	<div class='new-blog-title'><%= f.text_field :title, placeholder: "Blog title", :class => "new-blog-title-field" %></div>
 	<br>
 	<div class='content-container'>
 	<!-- <div class='new-blog-content-title'>Content:</div> -->
-	<div class='new-blog-content'><%= f.cktext_area :content %></div>
+	<div class='new-blog-content'><%= f.cktext_area :content  %></div>
 	
-	</div>
-	<%= f.submit %>
+	<%= f.submit :class =>'post-btn'%>
 	<% end %>
+	</div>
+	
 

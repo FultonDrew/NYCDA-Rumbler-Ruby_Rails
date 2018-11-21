@@ -10,6 +10,25 @@
 <div id='make-comments-button'>Click to write a comment</div>
 
 </div>
+
+
+<div id='comment-container-page'>
+<!-- <div id='comment-display'>Comments:</div> -->
+<% @blog.comments.all.reverse.each do |c| %>
+	<div class="singleComment">
+		<div id='comment-author' ><strong><a href='/users/<%= c.user.id %>'> <%= c.user.fname %></a>:</strong>
+		<%= c.content %>
+		
+	</div>
+
+
+
+
+	
+	</div>
+	<%end%>
+
+ 
 <hr id='line-break'>
 
 
@@ -21,25 +40,18 @@
 	<div id='submit-comment-button'><%= f.submit :class => "submit-button" %></div>
 	<% end %>
 
-<div id='comment-container-page'>
-<!-- <div id='comment-display'>Comments:</div> -->
-<% @blog.comments.all.reverse.each do |c| %>
-	<div class="singleComment">
-		<div id='comment-author' ><strong><a href='/users/<%= c.user.id %>'> <%= c.user.fname %></a>:</strong>
-		<%= c.content %>
-		</div>
-	</div>
-	<%end%>
-</div> 
 
-	<% if current_user.id == current_blog.user_id %>
+
+<% if current_user.id == current_blog.user_id %>
 	<div class='blog-buttons'>
 	<div class='update-button'><%= link_to "Update Blog", edit_blog_path, :class => "update" %></div>
 	<div class='delete-button'><%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: "Are you sure?"}, :class => "delete"  %></div>
 	</div>
-	<% end %>
-
 <% end %>
+<% end %>
+
+
+
 
 <%= javascript_include_tag 'app.js' %>
 

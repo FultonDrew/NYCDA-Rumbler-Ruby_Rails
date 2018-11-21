@@ -4,6 +4,8 @@
 	text-align: center;
 	width: 50%;
 	font-size: 3.5em;
+	color: rgba(35,54,86,0.5);
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .content-container {
@@ -19,7 +21,6 @@
 	text-align: center;
 	margin: 40px;
 	margin-right: 75px;
-	line-height: 50px;
 	float: right;
 	font-size: 1.8em;
 	text-decoration: none;
@@ -28,37 +29,44 @@
 	font-family: 'Hind Guntur', sans-serif;
 }
 
-.new-blog-content-title {
-	// border: 2px solid;
-	width: 85%;
-	margin: 5px auto;
-	font-size: 2em;
-	font-family: 'Hind Guntur', sans-serif;
-}
+// .new-blog-content-title {
+// 	// border: 2px solid;
+// 	width: 85%;
+// 	margin: 5px auto;
+// 	font-size: 2em;
+// }
 
-.new-blog-content {
+.edit-blog-content {
 	width: 90%;
 	margin: 5px auto;
 	border-radius: 5px;
 }
 
-.new-blog-title {
+.edit-blog-title {
 	margin: 15px auto;
 	border-radius: 10px;
 	height: 55px;
 	width: 77%;
 	font-size: 2em;
 	font-family: 'Hind Guntur', sans-serif;
-
 }
 
-.new-blog-title-field {
+.edit-blog-title-field {
 	height: 55px;
-	width: 40%;
-	font-size: 1em;
+	width: 50%;
+	font-size: 0.75em;
 	border-radius: 5px;
 	box-shadow: 4px 4px 4px rgba(253,106,2,0.8);
 	font-family: 'Hind Guntur', sans-serif;
 }
+
+.edit-blog-content-field {
+	height: 555px;
+	font-size: 0.75em;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px rgba(253,106,2,0.8);
+}
+
+
 
 

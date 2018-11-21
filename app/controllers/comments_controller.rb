@@ -36,6 +36,15 @@ def update
 		end
 	end
 
+def destroy
+		@blog = Blog.find(params[:blog_id])
+		comment = Comment.find(params[:id])
+		if comment.destroy
+			redirect_to "/"
+		
+	end
+end
+
 private
 
 def comment_params

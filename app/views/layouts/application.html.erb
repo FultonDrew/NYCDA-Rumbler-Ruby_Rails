@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rumbler</title>
+    <title>Where next</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur:300" rel="stylesheet">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiU_vpNHwXz4n9hyB9wNnMf3azejGjzZikznxcrIQl8Blt6cZ-ow" type="image/png">
+
   </head>
 
   <body>
 <div class='page-wrapper'>
 
-<nav>
+<nav id='navbar'>
+  <img id='map'></img>
   <div id='head-box'>
-    <div class='title'>Where next?</div>
+    <div class='title'><a href='/'>Where next?</a></div>
     <div class='title-sub'>A travel blog for those who love to wander</div>
   </div>
+
     <% if user_signed_in? %>
     <div id='navBtn'>
-      
-     
       <li id='navElement'><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-      
       <li id='navElement'><%= link_to "Users", users_path %></li>
       <li id='navElement'><%= link_to "Edit User", edit_user_registration_path %></li>
-       <li id='navElement'><%= link_to "New Post", new_blog_path %></li>
+      <li id='navElement'><%= link_to "New Post", new_blog_path %></li>
       <li id='navElement'><%= link_to "Home", root_path %></li>
-
       
     </div>
+    <div id='hamburger'></div>
       <% else %>
+
     <div id='navBtn'>
       <li id='navElement'> <%= link_to "Sign In", user_session_path  %></li>
     </div>
+
       <% end %>
 </nav>
 

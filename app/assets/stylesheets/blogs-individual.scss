@@ -17,7 +17,7 @@
 	background-color: rgba(234,226,222,0.9);
 	min-height: 300px;
 	border-radius: 8px;
-	box-shadow: 3px 3px 3px grey;
+	box-shadow: 4px 4px 4px rgba(253,106,2,0.8);
 }
 
 
@@ -29,12 +29,14 @@
 	font-size: 1.25em;
 	text-align: center;
 	text-decoration: none;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .post-title-page a{
 	text-align: center;
 	text-decoration: none;
 	align-items: center;
+	font-family: 'Hind Guntur', sans-serif;
 	// border: 2px solid;
 }
 
@@ -45,11 +47,10 @@
 
 .post-content-page {
 	// border: 2px solid red;
-	width: 100%;
+	width: 90%;
 	height: inherit;
-	// margin: 10px auto;
-	
-	text-align: center;
+	margin: 30px auto;
+	text-align: left;
 	text-decoration: none;
 	// align-items: center;
 	// flex-direction: row;
@@ -86,6 +87,7 @@
 .singleComment{
 	// border: 2px solid salmon;
 	visibility: hidden;
+	font-family: 'Hind Guntur', sans-serif;
 }
 // #comment-content {
 // 	border: 2px solid red;
@@ -103,10 +105,14 @@
 	margin: 10px auto;
 	padding: 15px;
 	background-color: rgba(234,226,222,0.9);
+	box-shadow: 2px 2px 2px white;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #see-comments-button {
 	// border: 2px solid;
+	font-size: 1.75em;
+	color: rgba(234,226,222,0.9);
 	margin: 15px auto;
 	width: 45%;
 	height: 7vw;
@@ -116,10 +122,13 @@
 	line-height: 7vw;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px grey;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #make-comments-button {
 	// border: 2px solid;
+	font-size: 1.75em;
+	color: rgba(234,226,222,0.9);
 	margin: 15px auto;
 	width: 45%;
 	height: 7vw;
@@ -129,6 +138,7 @@
 	line-height: 7vw;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px grey;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #make-comment-box {
@@ -140,6 +150,8 @@
 	font-size: 2em;
 	text-align: center;
 	grid-column: 1/3;
+	font-family: 'Hind Guntur', sans-serif;
+
 }
 
 #submit-comment-button {
@@ -147,6 +159,8 @@
 	width: 10%;
 	display: none;
 	margin: 0 auto;
+	background-color: rgba(65,91,118,0.4);
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 #comment-form {
@@ -160,11 +174,13 @@ font-size: 0.8em;
 }
 
 .submit-button {
-	background-color: rgba(35,54,86,0.5);
+	background-color: rgba(65,91,118,0.4);
 	width: 100%;
+	color: white;
 	height: 60px;
 	margin: 0 auto;
 	border-radius: 5px;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .blog-buttons {
@@ -174,6 +190,7 @@ font-size: 0.8em;
 	grid-column: 1/3;
 	display: flex;
 	justify-content: space-between;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .update-button {
@@ -186,6 +203,7 @@ font-size: 0.8em;
 	font-size: 2em;
 	text-decoration: none;
 	background-color: rgba(35,54,86,0.5);
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .update {
@@ -193,6 +211,7 @@ font-size: 0.8em;
 	text-decoration: none;
 	color: white;
 	margin: 20px;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .delete-button {
@@ -205,6 +224,7 @@ font-size: 0.8em;
 	font-size: 2em;
 	text-decoration: none;
 	background-color: red;
+	font-family: 'Hind Guntur', sans-serif;
 }
 
 .delete {
@@ -212,4 +232,19 @@ font-size: 0.8em;
 	text-decoration: none;
 	color: white;
 	margin: 20px;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.delete-comment-button {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 12%;
+	text-align: center;
+	color: white;
+	display: inline;
+	float: right;
+	font-size: 0.5em;
+	text-decoration: none;
+	background-color: red;
+	font-family: 'Hind Guntur', sans-serif;
 }
