@@ -1,8 +1,20 @@
 
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+
 // var commentShowBttn = document.getElementById('see-comments-button')
 
-	var commentSection = document.getElementsByClassName('singleComment')
-	var commentAuthor = document.getElementById('comment-author')	
+	var commentSection = document.getElementsByClassName('singleComment');
+	var commentAuthor = document.getElementById('comment-author');
+	
 // document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('see-comments-button').addEventListener("click", function(){
 	for (let i = 0; i < commentSection.length; i++){
@@ -34,24 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
-var navButtons = document.getElementById('navBtn');
-var navbar = document.getElementById('navbar')
-console.log('hey')
-document.getElementById('hamburger').addEventListener("click", function(){
-console.log('hey')
-	if (navButtons.style.display == 'block'){
-		navButtons.style.display = 'none'
-		console.log('hey')
-	}else {
-		(navButtons.style.display = 'block'),
-		(navButtons.style.width = '70%'),
-		(navButtons.style.height = '5px'),
-		(navButtons.style.marginTop = '23px'),
-		(navButtons.style.cssFloat = 'left')
-		
-		
-	}
-});
 
 
 
