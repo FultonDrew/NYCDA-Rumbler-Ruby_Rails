@@ -1,13 +1,13 @@
-<h1>Update your blog</h1>
+<h1 class='header'>Update your blog</h1>
 
-
-<%= form_for @blog do |f| %>
-	<div>Title: <%= f.text_field :title %></div>
+<!-- Form to update blog title and content -->
+<%= form_for current_blog do |f| %>
+<div class='edit-blog-title'><%= f.text_field :title, placeholder: "Blog title", :class => "edit-blog-title-field" %></div>
 	<br>
-	<div>Content: <%= f.text_area :content %></div>
-	<%= f.submit %>
+	<div class='content-container'>
+	<div class='edit-blog-content'><%= f.cktext_area :content,  :class => "edit-blog-content-field" %></div>
+
+	<%= f.submit :class =>'post-btn' %>
 	<% end %>
- 
- <% form_for @blog do |d| %>
- 	<div>Delete <%=d.destroy %>
- 		<% end %>
+	</div>
+

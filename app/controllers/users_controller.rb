@@ -5,7 +5,7 @@ def index
 	end
 
 	def new
-		# @blog = Blog.new
+		@user = User.new(user_params)
 	end
 
 	def create
@@ -25,15 +25,20 @@ def index
 	end
 
 	def edit 
-		@blog = Blog.find(params[:id])
+		user = User.find(params[:id])
+		if user.update(user_params)
+			redirect_to "/"
+		else
+			render "user/users/edit"
+		end
 	end
 
 	def update
-		blog = Blog.find(params[:id])
-		if blog.update(blog_params)
+		user = User.find(params[:id])
+		if user.update(user_params)
 			redirect_to "/"
 		else
-			render "blogs/#{blog.id}/edit"
+			render "user/users/edit"
 		end
 	end
 
@@ -47,8 +52,8 @@ def index
 
 
 private 
-def blog_params
-	params.require(:blog).permit(:title, :content, :user_id)
+def user_params
+	params.require(:user).permit(:email, :password)
 end
 
 end

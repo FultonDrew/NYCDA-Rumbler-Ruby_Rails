@@ -1,3 +1,111 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.update-container {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 70%;
+}
+
+.update-label {
+	font-size: 1.25em;
+	text-align: center;
+	margin: 10px auto;
+	width: 80%;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+
+.update-form {
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 35px;
+	width: 80%;
+	font-size: 1.25em;
+	background-color: white;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.update-label-head {
+	font-size: 2em;
+	text-align: center;
+	margin: 50px auto;
+	width: 40%;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+
+.user-title {
+	// border: 2px solid;
+	margin: 70px auto;
+	width: 70%;
+	font-family: 'Hind Guntur', sans-serif;
+	font-size: 3em;
+	text-align: center;
+	text-decoration: none;
+	color: green;
+}
+
+.user-title a{
+	text-align: center;
+	text-decoration: none;
+	align-items: center;
+	color: rgba(65,91,118,0.9);
+	font-family: 'Hind Guntur', sans-serif;
+	// border: 2px solid;
+}
+
+.delete-user-button {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 25%;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 0.75em;
+	text-decoration: none;
+	background-color: red;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.delete-user {
+	margin: 0 auto;
+	width: 40%;
+	border: 2px solid;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.signup-btn {
+	// border: 1px solid white;
+	border-radius: 5px;
+	width: 40%;
+	text-align: center;
+	margin: 10px auto;
+	font-size: 1.2em;
+	text-decoration: none;
+	color:white;
+	background-color: rgba(35,54,86,0.5);
+	box-shadow: 5px 5px 5px rgba(253,106,2,0.8);
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.update-container-password {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 65%;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.password-btn {
+	// border: 1px solid white;
+	border-radius: 5px;
+	width: 70%;
+	text-align: center;
+	margin: 10px auto;
+	font-size: 1.2em;
+	text-decoration: none;
+	color:white;
+	background-color: rgba(35,54,86,0.5);
+	box-shadow: 2px 2px 2px rgba(253,106,2,0.8);
+	font-family: 'Hind Guntur', sans-serif;
+}

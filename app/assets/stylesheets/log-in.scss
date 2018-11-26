@@ -1,0 +1,66 @@
+.log-in-container {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 40%;
+}
+
+.log-in-email-form {
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 35px;
+	width: 100%;
+	font-size: 1.5em;
+	background-color: white;
+	color: blue;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.login-label {
+	font-size: 2em;
+	text-align: center;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+.log-in-password-form {
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 35px;
+	width: 100%;
+	font-size: 1.5em;
+	background-color: white;
+	font-family: 'Hind Guntur', sans-serif;
+}
+.log-in-container-remember {
+	// border: 2px solid;
+	margin: 10px auto;
+	width: 40%;
+	font-size: 1em;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+
+#loginElement {
+	width: 100px;
+	height: 50px;
+	border-radius: 5%;
+	box-shadow: 2px 2px 2px;
+	text-align: center;
+	line-height: 50px;
+	display: inline-block;
+	font-family: 'Hind Guntur', sans-serif;
+	background-color: #EAE2DE;
+}
+
+.login-btn {
+	// border: 1px solid white;
+	border-radius: 5px;
+	width: 30%;
+	text-align: center;
+	margin: 10px auto;
+	font-size: 1.2em;
+	text-decoration: none;
+	color:white;
+	background-color: rgba(35,54,86,0.5);
+	box-shadow: 2px 2px 2px rgba(253,106,2,0.8);
+	font-family: 'Hind Guntur', sans-serif;
+}

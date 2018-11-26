@@ -1,4 +1,4 @@
-<h1>Hello</h1>
+<h1 class='header'>Our contributors</h1>
 <% @users.each do |u| %>
-	<div><a href='/users/<%= u.id %>'><%= u.fname %> <%= u.lname %></a></div>
+	<div class='user-title'><a href='/users/<%= u.id %>' ><%= u.fname %> <%= u.lname %></a><hr id='line-break'></div>
 	<% end %>

@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
 	@current_blog = Blog.find(params[:id])
 	end
 
+	
 end
