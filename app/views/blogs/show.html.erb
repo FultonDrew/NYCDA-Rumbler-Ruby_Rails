@@ -2,9 +2,9 @@
 
 <div class='blog-container-page'>
 <div class='post-container-page' >
-<div class='post-title-page'><h1><%= current_blog.title %> </h1></div>
+<div class='post-title-page'><%= current_blog.title %> </div>
 <div class='author'>Author: <a href='/users/<%= current_blog.user.id %>'><%= current_blog.user.fname%> <%= current_blog.user.lname %></a></div>
-<div class='post-content-page'><h2><%= raw current_blog.content %></h2></div>
+<div class='post-content-page'><%= raw current_blog.content %></div>
 </div>
 <div id='see-comments-button'>Click to see comments</div>
 <div id='make-comments-button'>Click to write a comment</div>
