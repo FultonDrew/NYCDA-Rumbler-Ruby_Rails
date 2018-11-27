@@ -1,8 +1,7 @@
 
-
+<div class='blog-container-home'>
 	<!-- Function that displays all blogs, in reverse order. This also limits the posts on the homepage to 20 posts. -->
 <% @blogs.all.reverse[0..20].each do |b| %>
-<div class='blog-container-home'>
 <!-- onmouseover and onmouseout of the post container changes the color to show which blog the user is looking at -->
 <div class='post-container' onmouseover = "this.style.backgroundColor='rgba(123,155,166,0.4)';" onmouseout = "this.style.backgroundColor='rgba(234,226,222,0.9)';">
 <!-- The onclick function is needed for the comment buttons on the show page. If this is omitted, the buttons require a page refresh before they work. -->
