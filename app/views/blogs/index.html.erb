@@ -10,9 +10,9 @@
 <!-- The truncate feature is used to limit the amount of the post shown on the homepage, similar to mainstream blog sites. -->
 <div class='post-content'><a href='/blogs/<%= b.id %>' onClick="window.location.reload()"><%= raw truncate(b.content, :length => 1800, separator: '', omission: '<br><br><strong>   . . . (click through to continue the adventure)</strong>', :escape => false)  %></a></div>
 
-</div>
 <hr id='line-break'>
 <% end %>
+</div>
 
 </div>
 
