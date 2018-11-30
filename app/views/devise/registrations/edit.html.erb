@@ -17,13 +17,12 @@
   <div class='update-label'><%= f.label :password   %> <i>(leave blank if you don't want to change it)</i>
   </div>
    <div class='update-label'> <%= f.password_field :password, autocomplete: "new-password", :class => "update-form", placeholder: "Password must be at least 6 characters in length" %>
-    
     </div>
     <% if @minimum_password_length %>
       <br>
       
       
-    <% end %>
+    
   </div>
 
   <div class='update-container'>
@@ -37,9 +36,9 @@
   </div>
 
 <div class='blog-buttons'>
-  <div class='update-button'><%= link_to "Update User", edit_user_registration_path, :class => "update" %></div>
+  <div class='update-button'><%= f.submit :class => "update-user" %> </div>
   <div class='delete-button'><%= link_to "Delete User", user_registration_path, method: :delete, data: {confirm: "Are you sure?"}, :class => "delete"  %><% end %>
   </div>
 </div>
 
-
+<% end %>
