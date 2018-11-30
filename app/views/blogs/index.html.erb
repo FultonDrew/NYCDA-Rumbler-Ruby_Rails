@@ -8,7 +8,7 @@
 <div class='post-title'><a href='/blogs/<%= b.id %>' onClick="window.location.reload()"><%= b.title %></a></div>
 <div class='author'>Author: <a href='/users/<%= b.user.id %>'><%= b.user.fname%> <%= b.user.lname %></a></div>
 <!-- The truncate feature is used to limit the amount of the post shown on the homepage, similar to mainstream blog sites. -->
-<div class='post-content'><a href='/blogs/<%= b.id %>' onClick="window.location.reload()"><%= raw truncate(b.content, :length => 1500, separator: ' ', omission: '<br><br><strong><strong><strong><strong>   . . . (click through to continue the adventure)</strong></strong></strong></strong>', :escape => false).html_safe  %></a></div>
+<div class='post-content'><a href='/blogs/<%= b.id %>' onClick="window.location.reload()"><%= raw truncate(b.content, :length => 1800, separator: ' ', omission: '<br><br><strong><strong><strong><strong>   . . . (click through to continue the adventure)</strong></strong></strong></strong>', :escape => false).html_safe  %></a></div>
 
 </div>
 
