@@ -1,5 +1,5 @@
 
-<h2 class='header'><%= @user.fname %> <%= @user.lname %>'s Profile</h2>
+<h1 class='header'>Posts by <%= @user.fname %> <%= @user.lname %></h1>
 
 
 
@@ -8,7 +8,7 @@
 <% @user.blogs.all.reverse[0..20].each do |b| %>
 
 <div class='blog-container-home'>
-<div class='post-container'>
+<div class='post-content'>
 	<div id='title-box'>
 		<div class='post-title'><a href="/blogs/<%= b.id %>" onClick="window.location.reload()"><%= b.title%></a></div>
 	</div>
