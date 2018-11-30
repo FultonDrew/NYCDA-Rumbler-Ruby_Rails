@@ -8,7 +8,7 @@
 <% @user.blogs.all.reverse[0..20].each do |b| %>
 
 <div class='blog-container-home'>
-<div class='post-content'>
+<div class='post-container'>
 	<div id='title-box'>
 		<div class='post-title'><a href="/blogs/<%= b.id %>" onClick="window.location.reload()"><%= b.title%></a></div>
 	</div>
