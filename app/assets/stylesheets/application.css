@@ -44,6 +44,7 @@
   display: none;
 }
 
+
 @media screen and (max-width: 955px){
 	.title {
 		font-size: 1em;
@@ -106,6 +107,15 @@
 	.update {
 	text-align: right;
 	}
+
+	#submit-comment-button {
+	width: 8%;
+	border:2px solid;
+	display: none;
+	margin: 10px auto;
+	background-color: rgba(65,91,118,0.4);
+	font-family: 'Hind Guntur', sans-serif;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -128,6 +138,7 @@
     display: block;
     text-align: left;
   }
+  
 }
 
 
