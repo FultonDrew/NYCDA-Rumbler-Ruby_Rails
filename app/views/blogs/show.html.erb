@@ -4,8 +4,10 @@
 <div class='post-container-page' >
 <div class='post-title-page'><%= current_blog.title %> </div>
 <div class='author'>Author: <a href='/users/<%= current_blog.user.id %>'><%= current_blog.user.fname%> <%= current_blog.user.lname %></a></div>
+<!-- adding raw allows the post conmtent from ckeditor to render as intended -->
 <div class='post-content-page'><%= raw current_blog.content %></div>
 </div>
+<!-- comment boxes are hidden intentionally and appear onclick. functions are found in app.js file -->
 <div id='see-comments-button'>Click to see comments</div>
 <div id='make-comments-button'>Click to write a comment</div>
 
@@ -19,19 +21,14 @@
 		<div id='comment-author' ><strong><a href='/users/<%= c.user.id %>'> <%= c.user.fname %></a>:</strong>
 		<%= c.content %>
 		
+		</div>
 	</div>
-
-
-
-
-	
-	</div>
-	<%end%>
+<%end%>
 
  
 <hr id='line-break'>
 
-
+<!-- only users who are signed-in can write comments -->
 <% if user_signed_in? %>
 	<%= form_for ([current_blog, current_blog.comments.build]) do |f| %>
 	<div id='make-comment-box'>Add a comment! 
@@ -41,7 +38,7 @@
 	<% end %>
 
 
-
+<!-- If the signed-in user is viewing a blog that they wrote, only they can edit or delete -->
 <% if current_user.id == current_blog.user_id %>
 	<div class='blog-buttons'>
 	<div class='update-button'><%= link_to "Update Blog", edit_blog_path, :class => "update" %></div>
